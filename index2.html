@@ -13,20 +13,18 @@
 <a href="index.html"><h3>Back</h3></a>
 
 
-
 <script>
-(function getNotes(){
-    let notes = getExistingNotes()
-    let notesArray = Object.values(notes)
-    let orderedList = document.getElementById('notes-list')
-    notesArray.array.forEach(note => {
-        let listItem = document.createElement('li')
-        listItem.innetHTML = note
-        orderedList.appendChild(listItem)
+(function getNotes() {
+    let notes = getExistingNotes();
+    let notesArray = Object.values(notes);
+    let orderedList = document.getElementById('notes-list');
+    notesArray.forEach((note)  => {
+        let listItem = document.createElement('li');
+        listItem.innerHTML = note;
+        orderedList.appendChild(listItem);
         
     });
-})()
+})();
 
 
 </script>
-</html>
